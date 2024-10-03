@@ -61,16 +61,16 @@ For consistency, the project follows these coding guidelines:
 Contributions are welcome! Please feel free to submit a pull request or open an issue for any improvements or suggestions.
 
 ## Team
-Project Manager: Francheska Villanueva
-Developers: 
+**Project Manager:** Francheska Villanueva
+**Developers:** 
   - John Gabriel Plaza
   - Ken Antonico
   - John Patrick Garcia
   - John Carlo Raborar
-UI/UX:
+**UI/UX:**
   - John Noah Bartolome
   - Jerome Corpuz
-Documentation:
+**Documentation:**
   - Richelle Gamba
   - Rosenelle Balboa
   - Shiela Par
