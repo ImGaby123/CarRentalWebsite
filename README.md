@@ -1,4 +1,4 @@
-This project is a Car Rental System developed using the ASP.NET Core MVC framework, providing both Customer and Admin interfaces, each with its own features to manage car rentals efficiently.
+This project is a Car Rental Website developed using the ASP.NET Core MVC framework, providing both Customer and Admin interfaces, each with its own features to manage car rentals efficiently.
 
 
 ## Table of Contents
@@ -32,7 +32,7 @@ The Car Rental System allows customers to browse available cars and services off
    ```bash
    git clone https://github.com/ImGaby123/CarRentalWebsite.git
 2. **Navigate to the project directory**:
-   cd car-rental-system
+   cd car-rental-website
 3. **Install dependencies (if applicable)**:
    dotnet restore
 4. **Run the application**:
