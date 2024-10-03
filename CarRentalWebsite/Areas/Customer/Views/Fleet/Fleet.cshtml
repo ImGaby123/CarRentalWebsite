@@ -1,1 +1,61 @@
-﻿<u>FLEET</u>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/customer/fleet.css" />
+</head>
+<body>
+    <header>
+        <div class="top-container">
+            <div class="search-logo">
+                <h1>IMG BACKGROUND</h1>
+                @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+
+                {
+                    <div class="search-bar">
+                        @Html.TextBox("Search", null, new { placeholder = "Search...", @class = "search-input" })
+                        <button type="submit" class="search-btn">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                }
+            </div>
+
+            <div class="main-text">
+                <h2>Figma ipsum</h2>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="bottom-container">
+            <div class="image-placeholder">
+                <div class="img-box">IMG</div> 
+            </div>
+            <div class="product-info">
+                <div class="title-button-container">
+                    <h3><strong>Figma ipsum component</strong></h3>
+                    <button class="btn">Button</button>
+                </div>
+                <p><strong>Price: $4,400</strong></p>
+                <ul class="item-list">
+                    <li>Figma ipsum</li>
+                    <li>Figma ipsum</li>
+                    <li>Figma ipsum</li>
+                    <li>Figma ipsum</li>
+                    <li>Figma ipsum</li>
+                    <li>Figma ipsum</li>
+                </ul>
+
+                <p>
+                    Figma ipsum component variant main layer. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Ipsum vector flatten device fill selection overflow...
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

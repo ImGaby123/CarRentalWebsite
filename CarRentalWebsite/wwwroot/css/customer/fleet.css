@@ -1,0 +1,121 @@
+﻿/* Top Container */
+.top-container {
+    background-color: #6c757d; /* Grey background */
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-bottom: 3px solid #007bff; /* Border bottom */
+}
+
+.search-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 5px 10px;
+    border: 1px solid #000;
+}
+
+.search-input {
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 50px;
+    margin-right: 10px;
+    flex-grow: 1;
+}
+
+.search-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
+}
+
+.main-text {
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* Bottom Container */
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: #f8f9fa; /* Light background for content */
+}
+
+.image-placeholder {
+    width: 45%;
+}
+
+.img-box {
+    background-color: #d3d3d3;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    border-radius: 10px;
+}
+
+.product-info {
+    width: 50%;
+}
+
+/* Title and Button Flex Layout */
+.title-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.item-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+    .item-list li {
+        width: 33%; /* 3 items per row */
+        margin-bottom: 10px;
+    }
+
+button.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 7px 40px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
