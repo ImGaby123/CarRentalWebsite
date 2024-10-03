@@ -2,7 +2,7 @@
 
 namespace CarRentalWebsite.Areas.Customer.Controllers
 {
-    [Area("About")]
+    [Area("Customer")]
     public class AboutController : Controller
     {
         public IActionResult About()
