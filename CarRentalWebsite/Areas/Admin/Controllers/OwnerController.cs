@@ -4,7 +4,7 @@ namespace CarRentalWebsite.Areas.Admin.Controllers
 {
     public class OwnerController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Owner()
         {
             return View();
         }
