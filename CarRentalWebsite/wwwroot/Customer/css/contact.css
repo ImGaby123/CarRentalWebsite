@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
 }
 
+/* Layout */
 .container {
     display: flex;
     justify-content: space-between;
@@ -18,6 +19,7 @@ body {
     margin: 0 auto;
 }
 
+/* Header Section */
 .header-section {
     background-color: #808080;
     height: 200px;
@@ -28,24 +30,11 @@ body {
     text-align: center;
 }
 
-.header-content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.header-text {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
 header h1 {
     font-size: 36px;
 }
 
+/* Main Content */
 .main-content {
     display: flex;
     padding: 20px;
@@ -61,7 +50,6 @@ header h1 {
 .text-block {
     background-color: #d3d3d3;
     padding: 20px;
-    border: 2px solid black;
     border-radius: 8px;
 }
 
@@ -70,7 +58,6 @@ header h1 {
     padding: 50px;
     text-align: center;
     font-size: 24px;
-    border: 2px solid black;
     border-radius: 8px;
 }
 
@@ -78,11 +65,11 @@ header h1 {
     width: 55%;
     background-color: #d3d3d3;
     padding: 25px;
-    border: 2px solid black;
     border-radius: 8px;
     position: relative;
 }
 
+/* Contact Form */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -97,7 +84,6 @@ header h1 {
     .contact-form textarea {
         padding: 10px;
         border-radius: 5px;
-        border: 1px solid #ccc;
         width: 100%;
     }
 
@@ -110,28 +96,11 @@ header h1 {
         width: 80px;
         margin-top: 20px;
         padding: 5px;
-        border: 2px solid black;
         background-color: white;
         border-radius: 20px;
         cursor: pointer;
-        float: left;
     }
 
         .contact-form button:hover {
             background-color: #e0e0e0;
         }
-
-.help-icon {
-    position: absolute;
-    bottom: 28px;
-    right: 20px;
-    background-color: black;
-    color: white;
-    font-size: 20px;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}

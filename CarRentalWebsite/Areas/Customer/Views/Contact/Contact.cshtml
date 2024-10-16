@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model CarRentalWebsite.Areas.Customer.Models.Contact
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -8,10 +10,7 @@
 </head>
 <body>
     <header class="header-section">
-        <div class="header-content">
-            <div class="header-text">IMG BACKGROUND</div>
-            <h1>Figma ipsum</h1>
-        </div>
+            <h1>CONTACT US</h1>
     </header>
     <main class="main-content">
         <div class="container">
@@ -26,24 +25,20 @@
             </div>
 
             <div class="right-content">
-                <form class="contact-form">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" />
+                @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+                {
+                    <div class="contact-form">
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control", placeholder = "NAME" })
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" />
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "EMAIL", type = "email" })
 
-                    <label for="phone">Phone:</label>
-                    <input type="text" id="phone" name="phone" />
+                        @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control", placeholder = "PHONE NUMBER" })
 
-                    <label for="questions">Questions:</label>
-                    <textarea id="questions" name="questions"></textarea>
+                        @Html.TextAreaFor(model => model.Questions, new { @class = "form-control", placeholder = "QUESTIONS", rows = "4" })
 
-                    <button type="submit">Button</button>
-                </form>
-                <div class="help-icon">
-                    <span>?</span>
-                </div>
+                        <button type="submit" class="btn">SEND</button>
+                    </div>
+                }
             </div>
         </div>
     </main>
