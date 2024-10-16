@@ -5,5 +5,58 @@
 </head>
 <body>
     <h1>Reports</h1>
+
+    <!--Money Summary Stuff Here-->
+    <div>
+        <!--Total Earnings-->
+        <div>
+            @Html.Label("Total Earnings")
+            @Html.Label("PHP 123,130")
+        </div>
+
+        <!--Amounts Paid-->
+        <div>
+            @Html.Label("Amounts Paid")
+            @Html.Label("PHP 100,000")
+        </div>
+
+        <!--Total Refunds-->
+        <div>
+            @Html.Label("Total Refunds")
+            @Html.Label("PHP 9,125")
+        </div>
+    </div>
+
+    <!--Table Here-->
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Rental ID</th>
+                    <th>Customer Name</th>
+                    <th>Start Date</th>
+                    <th>Return Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <th>1001</th>
+                    <th>Bruno</th>
+                    <th>9/24/2024</th>
+                    <th>11/24/2024</th>
+                    <th>Completed</th>
+
+                    <td>
+                        <button class="edit-btn">✏️</button>
+                        <button class="delete-btn">🗑️</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
