@@ -10,7 +10,6 @@ body {
     line-height: 1.6;
 }
 
-/* Layout */
 .container {
     display: flex;
     justify-content: space-between;
@@ -19,7 +18,6 @@ body {
     margin: 0 auto;
 }
 
-/* Header Section */
 .header-section {
     background-color: #808080;
     height: 200px;
@@ -34,7 +32,6 @@ header h1 {
     font-size: 36px;
 }
 
-/* Main Content */
 .main-content {
     display: flex;
     padding: 20px;
@@ -47,54 +44,57 @@ header h1 {
     gap: 20px;
 }
 
-.text-block {
+.text-block,
+.map-block {
     background-color: #d3d3d3;
-    padding: 20px;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    height: 300px;
+}
+
+.text-block {
+    padding: 20px;
 }
 
 .map-block {
-    background-color: #d3d3d3;
-    padding: 50px;
-    text-align: center;
-    font-size: 24px;
-    border-radius: 8px;
+    padding: 10px;
 }
 
 .right-content {
     width: 55%;
     background-color: #d3d3d3;
-    padding: 25px;
     border-radius: 8px;
     position: relative;
 }
 
-/* Contact Form */
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+    padding: 10px;
 }
-
-    .contact-form label {
-        margin-top: 10px;
-    }
 
     .contact-form input,
     .contact-form textarea {
-        padding: 10px;
+        padding: 20px;
         border-radius: 5px;
         width: 100%;
     }
 
+.questions-textarea {
+    resize: none;
+    height: 270px;
+}
+
     .contact-form textarea {
         resize: none;
-        height: 100px;
     }
 
     .contact-form button {
         width: 80px;
-        margin-top: 20px;
         padding: 5px;
         background-color: white;
         border-radius: 20px;

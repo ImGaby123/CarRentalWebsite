@@ -6,11 +6,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="~/Customer/css/contact.css" />
-
 </head>
 <body>
     <header class="header-section">
-            <h1>CONTACT US</h1>
+        <h1>CONTACT US</h1>
     </header>
     <main class="main-content">
         <div class="container">
@@ -20,7 +19,13 @@
                     <p>Lorem ipsum dolor sit amet consectetur. Penatibus sed habitasse faucibus platea aliquam fusce sapien ipsum. Venenatis neque duis massa viverra mollis.</p>
                 </div>
                 <div class="map-block">
-                    <p>MAP</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13388.818778236835!2d121.029959!3d14.6999207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b0d899095555%3A0x523cb309be95e9a6!2sQuezon%20City%20University%20-%20Main!5e0!3m2!1sen!2sph!4v1694694405154!5m2!1sen!2sph"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy">
+                    </iframe>
                 </div>
             </div>
 
@@ -34,7 +39,7 @@
 
                         @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control", placeholder = "PHONE NUMBER" })
 
-                        @Html.TextAreaFor(model => model.Questions, new { @class = "form-control", placeholder = "QUESTIONS", rows = "4" })
+                        @Html.TextAreaFor(model => model.Questions, new { @class = "form-control questions-textarea", placeholder = "QUESTIONS", rows = "4" })
 
                         <button type="submit" class="btn">SEND</button>
                     </div>
@@ -42,6 +47,5 @@
             </div>
         </div>
     </main>
-
 </body>
 </html>
