@@ -1,6 +1,5 @@
-﻿/* Top Container */
-.top-container {
-    background-color: #6c757d; /* Grey background */
+﻿.top-container {
+    background-color: #000;
     padding: 20px;
     text-align: center;
     color: white;
@@ -11,7 +10,7 @@
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 60px;
     font-weight: bold;
 }
 
@@ -19,12 +18,11 @@ p {
     font-size: 18px;
 }
 
-/* Bottom Container */
 .bottom-container {
     display: flex;
     justify-content: space-between;
     padding: 30px;
-    background-color: #f8f9fa; /* Light background for content */
+    background-color: #f8f9fa; 
 }
 
 .image-placeholder {
@@ -48,7 +46,6 @@ p {
     width: 50%;
 }
 
-/* Title and Button Flex Layout */
 .title-button-container {
     display: flex;
     justify-content: space-between;
@@ -62,11 +59,18 @@ h3 {
 }
 
 button.btn {
-    background-color: #007bff;
+    background-color: #000;
     color: white;
     border: none;
     padding: 7px 40px;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
+    margin-left: auto;
+    display: block;
 }
+
+    button.btn:hover {
+        background-color: #fff;
+        color: #000;
+    }

@@ -19,7 +19,7 @@ body {
 }
 
 .header-section {
-    background-color: #808080;
+    background-color: #000;
     height: 200px;
     display: flex;
     align-items: center;
@@ -28,8 +28,9 @@ body {
     text-align: center;
 }
 
-header h1 {
-    font-size: 36px;
+h1 {
+    font-weight: bold;
+    font-size: 60px;
 }
 
 .main-content {
@@ -46,12 +47,11 @@ header h1 {
 
 .text-block,
 .map-block {
-    background-color: #d3d3d3;
+    background-color: #ede9e8;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
     height: 300px;
 }
 
@@ -65,7 +65,7 @@ header h1 {
 
 .right-content {
     width: 55%;
-    background-color: #d3d3d3;
+    background-color: #ede9e8;
     border-radius: 8px;
     position: relative;
 }
@@ -96,11 +96,12 @@ header h1 {
     .contact-form button {
         width: 80px;
         padding: 5px;
-        background-color: white;
-        border-radius: 20px;
+        border-radius: 10px;
         cursor: pointer;
+        background-color: #000;
+        color: #fff;
     }
 
         .contact-form button:hover {
-            background-color: #e0e0e0;
+            background-color: #fff;
         }
