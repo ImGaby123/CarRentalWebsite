@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CarRentalWebsite.Areas.Admin.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.Transactions;
 
 namespace CarRentalWebsite.Areas.Admin.Controllers
 {
@@ -7,7 +9,8 @@ namespace CarRentalWebsite.Areas.Admin.Controllers
     {
         public IActionResult Reports()
         {
-            return View();
+            Transactions t = new();
+            return View(t);
         }
     }
 }
