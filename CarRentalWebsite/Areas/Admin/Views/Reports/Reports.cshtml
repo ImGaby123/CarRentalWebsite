@@ -1,4 +1,4 @@
-﻿
+﻿@model CarRentalWebsite.Areas.Admin.Models.Transactions
 <html>
 <head>
     <title>Reports</title>
@@ -11,19 +11,19 @@
         <!--Total Earnings-->
         <div>
             @Html.Label("Total Earnings")
-            @Html.Label("PHP 123,130")
+            @Model.total_Earnings
         </div>
 
         <!--Amounts Paid-->
         <div>
             @Html.Label("Amounts Paid")
-            @Html.Label("PHP 100,000")
+            @Model.total_AmountPaid
         </div>
 
         <!--Total Refunds-->
         <div>
             @Html.Label("Total Refunds")
-            @Html.Label("PHP 9,125")
+            @Model.total_Refunds
         </div>
     </div>
 
