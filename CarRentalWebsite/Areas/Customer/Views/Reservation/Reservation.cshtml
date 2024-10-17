@@ -1,4 +1,5 @@
 ﻿@model CarRentalWebsite.Areas.Customer.Models.Reservation
+@using CarRentalWebsite.Areas.Customer.Helpers
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,35 +57,35 @@
         <h4>Our Cars</h4>
         <p>Check our car categories</p>
 
-        <div class = "car-category">
-            <p> <strong>Group A</strong></p>
-            <p>From ₱ 950 To 1,250</p>
+        <div class="car-category">
+            <p><strong>Group A</strong></p>
+            <p>From ₱ 950 To 1,250</p>
             <p>Group A - Hatchback Automatic/Manual Transmission</p>  
-            <img src="@Url.Content("~/Customer/img/img_a.png")" alt="Group A" />
+            @Html.ImageWithSize(Url.Content("~/Customer/img/img_a.png"), alt: "Group A") <!-- Using helper -->
             <button type="button" onclick="window.location.href='@Url.Action("Fleet", "Fleet", new { area = "Customer" })'">Book Now</button>
-
-            <p> <strong>Group B</strong></p>
-            <p>From ₱ 950 To 1,250</p>
+        
+            <p><strong>Group B</strong></p>
+            <p>From ₱ 950 To 1,250</p>
             <p>Group B - Sedan Automatic/Manual Transmission</p>  
-            <img src="@Url.Content("~/Customer/img/img_b.png")" alt="Group A" />
+            @Html.ImageWithSize(Url.Content("~/Customer/img/img_b.png"), alt: "Group B") <!-- Using helper -->
             <button type="button" onclick="window.location.href='@Url.Action("Fleet", "Fleet", new { area = "Customer" })'">Book Now</button>
-
-            <p> <strong>Group C</strong></p>
-            <p>From ₱ 950 To 1,250</p>
+        
+            <p><strong>Group C</strong></p>
+            <p>From ₱ 950 To 1,250</p>
             <p>Group C - SUV Automatic/Manual Transmission</p>  
-            <img src="@Url.Content("~/Customer/img/img_c.png")" alt="Group A" />
+            @Html.ImageWithSize(Url.Content("~/Customer/img/img_c.png"), alt: "Group C") <!-- Using helper -->
             <button type="button" onclick="window.location.href='@Url.Action("Fleet", "Fleet", new { area = "Customer" })'">Book Now</button>
-
-            <p> <strong>Group D</strong></p>
-            <p>From ₱ 950 To 1,250</p>
+        
+            <p><strong>Group D</strong></p>
+            <p>From ₱ 950 To 1,250</p>
             <p>Group D - Pick-up Truck Automatic/Manual Transmission</p>  
-            <img src="@Url.Content("~/Customer/img/img_d.png")" alt="Group A" />
+            @Html.ImageWithSize(Url.Content("~/Customer/img/img_d.png"), alt: "Group D") <!-- Using helper -->
             <button type="button" onclick="window.location.href='@Url.Action("Fleet", "Fleet", new { area = "Customer" })'">Book Now</button>
-
-            <p> <strong>Group E</strong></p>
-            <p>From ₱ 950 To 1,250</p>
+        
+            <p><strong>Group E</strong></p>
+            <p>From ₱ 950 To 1,250</p>
             <p>Group E - Van Automatic/Manual Transmission</p>  
-            <img src="@Url.Content("~/Customer/img/img_e.png")" alt="Group A" />
+            @Html.ImageWithSize(Url.Content("~/Customer/img/img_e.png"), alt: "Group E") <!-- Using helper -->
             <button type="button" onclick="window.location.href='@Url.Action("Fleet", "Fleet", new { area = "Customer" })'">Book Now</button>
         </div>
     </div>
