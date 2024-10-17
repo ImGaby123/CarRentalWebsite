@@ -2,7 +2,7 @@
 
 namespace CarRentalWebsite.Areas.Customer.Models
 {
-    public class Index
+    public class Reservation
     {
         public string Name { get; set; }
 

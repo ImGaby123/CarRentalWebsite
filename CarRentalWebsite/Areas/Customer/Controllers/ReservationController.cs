@@ -3,9 +3,9 @@
 namespace CarRentalWebsite.Areas.Customer.Controllers
 {
     [Area("Customer")]
-    public class HomeController : Controller
+    public class ReservationController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Reservation()
         {
             return View();
         }
