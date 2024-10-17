@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CarRentalWebsite.Areas.Admin.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CarRentalWebsite.Areas.Admin.Controllers
 {
@@ -7,24 +8,15 @@ namespace CarRentalWebsite.Areas.Admin.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            Dashboard d = new();
+            return View(d);
         }
 
         [HttpPost]
 
         public IActionResult Index(Models.Dashboard d) {
 
-            double totalRevenue = 500000;
-            double totalACustomer = 10500;
-            double totalRentedCars = 5600;
-
-
-            // Model Var assignment Here
-            d.total_Revenue = totalRevenue;
-            d.total_ACustomer = totalACustomer;
-            d.total_RentedCars = totalRentedCars;
-
-            return View(d);
+            return View();
         }
     }
 }
