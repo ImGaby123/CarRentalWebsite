@@ -4,9 +4,9 @@
     {
 
         // Dashboard Totals Data Summary 
-        public double Total_Revenue { get; set; }
-        public double Total_ACustomer {  get; set; }
-        public double total_RentedCars {  get; set; }
+        public double total_Revenue { get; set; }
+        public double total_ACustomer { get; set; }
+        public double total_RentedCars { get; set; }
 
 
     }

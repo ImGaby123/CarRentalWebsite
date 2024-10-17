@@ -7,64 +7,65 @@
 <body>
     <h1>Index</h1>
 
-    <div class="cards border-box">
-        <div class="card-left">
-            <!--Total Revenue-->
-            <div>
-                <p>PHP 500,000.00</p>
-                @Html.Label("Total Revenue")
+        <div class="cards border-box">
+            <div class="card-left">
+                <!--Total Revenue-->
+                <div>
+                    @Html.LabelFor(d => Model.total_Revenue)
+                    @Html.Label("Total Revenue")
+                </div>
+
+                <!--Active Customers-->
+                <div>
+                    @Html.LabelFor(d => Model.total_ACustomer)
+                    @Html.Label("PHP Active Customers")
+                </div>
+
+                <!--Numbers of Cars Rented Out-->
+                <div>
+                    @Html.LabelFor(d => Model.total_RentedCars)
+                    @Html.Label("Number of Cars Rented Out")
+                </div>
             </div>
 
-            <!--Active Customers-->
-            <div>
-                <p>PHP 10.5k</p>
-                @Html.Label("PHP Active Customers")
-            </div>
+            <div class="card-right">
+                <!--Recent Transactions-->
+                <div></div>
 
-            <!--Numbers of Cars Rented Out-->
-            <div>
-                <p>PHP 5.6k</p>
-                @Html.Label("Number of Cars Rented Out")
+                <!--Top Cars Rented Out-->
+                <div></div>
             </div>
         </div>
 
-        <div class="card-right">
-            <!--Recent Transactions-->
-            <div></div>
-
-            <!--Top Cars Rented Out-->
-            <div></div>
+        <!--Available Cars Table Here-->
+        <div>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Color</th>
+                        <th>Year Model</th>
+                        <th>Rent Price</th>
+                        <th>ID Number</th>
+                        <th>Max Speed</th>
+                        <th>Condition</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Car.img</th>
+                        <th>Toyota Rush</th>
+                        <th>Red</th>
+                        <th>2022</th>
+                        <th>2000/hr</th>
+                        <th>1245</th>
+                        <th>25km/h</th>
+                        <th>Available</th>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </div>
-
-    <!--Available Cars Table Here-->
-    <div>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Image</th>
-                    <th>Name</th>
-                    <th>Color</th>
-                    <th>Year Model</th>
-                    <th>Rent Price</th>
-                    <th>ID Number</th>
-                    <th>Max Speed</th>
-                    <th>Condition</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>Car.img</th>
-                    <th>Toyota Rush</th>
-                    <th>Red</th>
-                    <th>2022</th>
-                    <th>2000/hr</th>
-                    <th>1245</th>
-                    <th>25km/h</th>
-                    <th>Available</th>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    
 </body>
 </html>
