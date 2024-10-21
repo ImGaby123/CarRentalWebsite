@@ -9,59 +9,69 @@
     margin-top: 20px;
 }
 
-h2 {
+h1 {
     font-size: 60px;
     font-weight: bold;
 }
 
-p {
-    font-size: 18px;
+.bottom-container {
+    padding: 30px;
 }
 
-.bottom-container {
+.product-container {
     display: flex;
     justify-content: space-between;
-    padding: 30px;
-    background-color: #f8f9fa; 
+}
+
+.car-icons-flex {
+    display: flex;
+    justify-content: left;
 }
 
 .image-placeholder {
-    width: 45%;
-}
-
-.img-box {
-    background-color: #d3d3d3;
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: black;
-    border-radius: 10px;
-}
-
-.product-info {
     width: 50%;
 }
 
-.title-button-container {
+.img-box {
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+}
+
+.product-info {
+    width: 90%;
+}
+
+.product-container h2 {
+    font-size: 1.25rem;
+}
+
+.product-container h4 {
+    font-size: 1rem;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+.product-container p {
+    font-size: 1rem;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+.product-container .car-icons-number {
+    font-size: 0.9rem;
     margin-bottom: 10px;
 }
 
-h3 {
-    font-size: 24px;
-    margin-bottom: 0;
+.product-container .product-name {
+    margin-bottom: 5px;
 }
 
 button.btn {
     background-color: #000;
-    color: white;
-    border: none;
+    color: #fff;
     padding: 7px 40px;
     border-radius: 10px;
     font-size: 16px;
@@ -71,6 +81,5 @@ button.btn {
 }
 
     button.btn:hover {
-        background-color: #fff;
-        color: #000;
+        color: #fff;
     }

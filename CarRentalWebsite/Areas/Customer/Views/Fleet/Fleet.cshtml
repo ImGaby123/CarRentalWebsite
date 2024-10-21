@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using CarRentalWebsite.Areas.Customer.Helpers
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -10,32 +12,51 @@
     <header>
         <div class="top-container">
             <div class="main-text">
-                <h2>OUR FLEET</h2>
+                <h1>OUR FLEET</h1>
                 <p>Browse our collection of well-maintained and clean vehicles.</p>
             </div>
         </div>
     </header>
 
     <main>
+        <div class="filter-car">
+            <p>
+                Sort by
+            </p>
+        </div>
         <div class="bottom-container">
-            <div class="product-info">
-                <div class="title-button-container">
-                    <h3><strong>PICK-UP TRUCKS A/M Transmission</strong></h3>
+
+            @foreach (var car in Model)
+            {
+                <div class="product-container">
+                    <div class="product-info">
+                        <div class="product-name">
+                            <h2><strong>@car.CarModel @car.CarTransmission</strong></h2>
+                        </div>
+                        <div class="car-icons-flex">
+                               <p class = car-icons-number><img src="@Url.Content("~/Customer/img/car_door.png")"/></p>
+                               <p class = car-icons-number>@car.CarDoor</p>
+                               <p class = car-icons-number><img src="@Url.Content("~/Customer/img/car_seat.png")"/></p>
+                               <p class = car-icons-number>@car.CarSeat</p>
+                               <p class = car-icons-number><img src="@Url.Content("~/Customer/img/car_baggage.png")"/></p>
+                               <p class = car-icons-number>@car.CarBaggage</p>
+                        </div>
+                            <h4><strong>Price:  </strong>₱ @car.CarPrice</h4>
+                        <h4><strong>Car Category: </strong></h4>
+                        <p>@car.CarCategory.</p>
+                        <h4><strong>Top Feature:</strong></h4>
+                        <p>@car.CarTopFeature.</p>
+                        <h4><strong>Safety:</strong></h4>
+                        <p>@car.CarSafety</p>
+                        <button class="btn">Button</button>
+                    </div>
+                    <div class="image-placeholder">
+                        <div class="img-box">
+                            @Html.ImageWithSize(Url.Content((string)car.CarImage), alt: "CarImage")
+                        </div>
+                    </div>
                 </div>
-                <p><strong>Price: $4,400</strong></p>
-                <p><strong>Top Feature:</strong></p>
-                <p> Advanced safety technologies, including Toyota Safety Sense (pre-collision system, lane departure alert)</p>
-                <p><strong>Safety:</strong></p>
-                <p>
-                Toyota Safety Sense (pre-collision system, lane departure alert, adaptive cruise control)
-                Vehicle Stability Control
-                Anti-lock Braking System (ABS) with Electronic Brakeforce Distribution (EBD)
-                </p>
-                <button class="btn">Button</button>
-            </div>
-            <div class="image-placeholder">
-                <div class="img-box"></div>
-            </div>
+            }
         </div>
     </main>
 </body>

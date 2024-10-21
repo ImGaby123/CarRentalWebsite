@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using CarRentalWebsite.Areas.Customer.Helpers;
+
 
 namespace CarRentalWebsite.Areas.Customer.Controllers
 {
@@ -7,7 +9,9 @@ namespace CarRentalWebsite.Areas.Customer.Controllers
     {
         public IActionResult Fleet()
         {
-            return View();
+            var fleetList = FleetFunction.GetFleetData();
+
+            return View(fleetList);
         }
     }
 }
