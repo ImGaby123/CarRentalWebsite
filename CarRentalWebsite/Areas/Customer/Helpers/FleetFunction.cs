@@ -1,4 +1,5 @@
 ﻿using CarRentalWebsite.Areas.Customer.Models;
+using System.Globalization;
 
 namespace CarRentalWebsite.Areas.Customer.Helpers
 {
@@ -10,72 +11,72 @@ namespace CarRentalWebsite.Areas.Customer.Helpers
 
             var car1 = new Fleet
             {
-                CarModel = "TOYOTA PICK-UP TRUCKS",
-                CarCategory = "Pick-Up Trucks",
-                CarPrice = 4400.00,
-                CarTransmission = "A/M Transmission",
+                CarModel = "Honda Brio 2024",
+                CarCategory = "Sedan",
+                CarPrice = 3000.00m,
+                CarTransmission = "Automatic/Manual Transimision",
                 CarSeat = 5,
-                CarDoor = 4,
+                CarDoor = 5,
                 CarBaggage = 3,
-                CarTopFeature = "Advanced safety technologies, including Toyota Safety Sense (pre-collision system, lane departure alert)",
+                CarTopFeature = "7-inch Touchscreen Display, Keyless Entry, LED Headlights",
                 CarSafety = "Toyota Safety Sense (pre-collision system, Lane departure alert, Adaptive cruise control) Vehicle Stability Control Anti-lock Braking System (ABS) with Electronic Brakeforce Distribution (EBD)",
-                CarImage = "~/Customer/img/img_d.png"
+                CarImage = "~/Customer/img/honda_brio_2024.png"
             };
 
             var car2 = new Fleet
             {
-                CarModel = "TOYOTA PICK-UP TRUCKS",
-                CarCategory = "Pick-Up Trucks",
-                CarPrice = 4400.00,
-                CarTransmission = "A/M Transmission",
+                CarModel = "Honda City 2024",
+                CarCategory = "Sedan",
+                CarPrice = 3500.00m,
+                CarTransmission = "Automatic/Manual Transimision",
                 CarSeat = 6,
                 CarDoor = 4,
                 CarBaggage = 3,
-                CarTopFeature = "Advanced safety technologies, including Toyota Safety Sense (pre-collision system, lane departure alert)",
+                CarTopFeature = "8-inch Infotainment System, Push Start, Leather Upholstery",
                 CarSafety = "Toyota Safety Sense (pre-collision system, lane departure alert, adaptive cruise control)\nVehicle Stability Control\r\nAnti-lock Braking System (ABS) with Electronic Brakeforce Distribution (EBD)",
-                CarImage = "~/Customer/img/img_e.png"
+                CarImage = "~/Customer/img/honda_city_2024.png"
             };
 
             var car3 = new Fleet
             {
-                CarModel = "TOYOTA PICK-UP TRUCKS",
-                CarCategory = "Pick-Up Trucks",
-                CarPrice = 4400.00,
-                CarTransmission = "A/M Transmission",
-                CarSeat = 4,
-                CarDoor = 4,
+                CarModel = "Mitsubishi Mirage 2024",
+                CarCategory = "Sedan",
+                CarPrice = 2800.00m,
+                CarTransmission = "Automatic/Manual Transimision",
+                CarSeat = 5,
+                CarDoor = 5,
                 CarBaggage = 3,
-                CarTopFeature = "Advanced safety technologies, including Toyota Safety Sense (pre-collision system, lane departure alert)",
-                CarSafety = "Toyota Safety Sense (pre-collision system, lane departure alert, adaptive cruise control)\r\nVehicle Stability Control\r\nAnti-lock Braking System (ABS) with Electronic Brakeforce Distribution (EBD)",
-                CarImage = "~/Customer/img/img_b.png"
+                CarTopFeature = "Keyless Entry, Apple CarPlay/Android Auto, Bluetooth Audio",
+                CarSafety = "Toyota Safety Sense (pre-collision system, Lane departure alert, Adaptive cruise control) Vehicle Stability Control Anti-lock Braking System (ABS) with Electronic Brakeforce Distribution (EBD)",
+                CarImage = "~/Customer/img/mitsubishi_mirage_2024.png"
             };
 
             var car4 = new Fleet
             {
-                CarModel = "TOYOTA PICK-UP TRUCKS",
-                CarCategory = "Pick-Up Trucks",
-                CarPrice = 4400.00,
-                CarTransmission = "A/M Transmission",
-                CarSeat = 4,
-                CarDoor = 4,
+                CarModel = "Honda Brio 2024",
+                CarCategory = "Sedan",
+                CarPrice = 3000.00m,
+                CarTransmission = "Automatic/Manual Transimision",
+                CarSeat = 5,
+                CarDoor = 5,
                 CarBaggage = 3,
-                CarTopFeature = "Advanced safety technologies, including Toyota Safety Sense (pre-collision system, lane departure alert)",
-                CarSafety = "Toyota Safety Sense (pre-collision system, lane departure alert, adaptive cruise control)\r\nVehicle Stability Control\r\nAnti-lock Braking System (ABS) with Electronic Brakeforce Distribution (EBD)",
-                CarImage = "~/Customer/img/img_c.png"
+                CarTopFeature = "7-inch Touchscreen Display, Keyless Entry, LED Headlights",
+                CarSafety = "Toyota Safety Sense (pre-collision system, Lane departure alert, Adaptive cruise control) Vehicle Stability Control Anti-lock Braking System (ABS) with Electronic Brakeforce Distribution (EBD)",
+                CarImage = "~/Customer/img/hatchback.png"
             };
 
             var car5 = new Fleet
             {
-                CarModel = "TOYOTA PICK-UP TRUCKS",
-                CarCategory = "Pick-Up Trucks",
-                CarPrice = 4400.00,
-                CarTransmission = "A/M Transmission",
-                CarSeat = 5,
+                CarModel = "Honda City 2024",
+                CarCategory = "Sedan",
+                CarPrice = 3500.00m,
+                CarTransmission = "Automatic/Manual Transimision",
+                CarSeat = 6,
                 CarDoor = 4,
                 CarBaggage = 3,
-                CarTopFeature = "Advanced safety technologies, including Toyota Safety Sense (pre-collision system, lane departure alert)",
-                CarSafety = "Toyota Safety Sense (pre-collision system, lane departure alert, adaptive cruise control)\r\nVehicle Stability Control\r\nAnti-lock Braking System (ABS) with Electronic Brakeforce Distribution (EBD)",
-                CarImage = "~/Customer/img/img_a.png"
+                CarTopFeature = "8-inch Infotainment System, Push Start, Leather Upholstery",
+                CarSafety = "Toyota Safety Sense (pre-collision system, lane departure alert, adaptive cruise control)\nVehicle Stability Control\r\nAnti-lock Braking System (ABS) with Electronic Brakeforce Distribution (EBD)",
+                CarImage = "~/Customer/img/img_b.png"
             };
 
             fleetList.Add(car1);

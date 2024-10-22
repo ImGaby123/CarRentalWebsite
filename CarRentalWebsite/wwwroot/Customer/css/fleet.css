@@ -1,5 +1,6 @@
 ﻿.top-container {
-    background-color: #000;
+    /*background-color: #000;*/
+    background-image: url("/Customer/img/fleet_bg.png");
     padding: 20px;
     text-align: center;
     color: white;
@@ -7,15 +8,30 @@
 
 .main-text {
     margin-top: 20px;
+    font-style: italic;
+}
+
+.main-text p{
+    font-size: larger;
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 70px;
     font-weight: bold;
 }
 
+.car-category-dropdown {
+    border-radius: 25px; 
+    padding: 5px;
+    border: 2px solid #000;
+    font-size: 16px;
+    font-weight: bold;
+    width: 150px;
+    margin: 20px 30px;
+}
+
 .bottom-container {
-    padding: 30px;
+    padding-left: 30px;
 }
 
 .product-container {
@@ -23,9 +39,15 @@ h1 {
     justify-content: space-between;
 }
 
+.button-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
 .car-icons-flex {
     display: flex;
     justify-content: left;
+    margin-left: -10px;
 }
 
 .image-placeholder {
@@ -45,36 +67,45 @@ h1 {
 }
 
 .product-container h2 {
-    font-size: 1.25rem;
+    font-size: 1.30rem;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.product-container .car-transmission {
+    margin-top: -15px;
 }
 
 .product-container h4 {
-    font-size: 1rem;
-    padding-left: 10px;
-    margin-bottom: 5px;
+    font-size: 1.15rem;
+    margin-top: -15px;
 }
 
-.product-container p {
+.product-container .p-labels {
     font-size: 1rem;
-    padding-left: 10px;
-    margin-bottom: 5px;
+    margin-top: -10px;
 }
 
 .product-container .car-icons-number {
     font-size: 0.9rem;
-    margin-bottom: 10px;
+    margin-top: -15px;
+    padding-left: 10px;
 }
-
-.product-container .product-name {
-    margin-bottom: 5px;
+.button-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 button.btn {
+    margin-top: 20px;
     background-color: #000;
     color: #fff;
-    padding: 7px 40px;
-    border-radius: 10px;
-    font-size: 16px;
+    padding: 7px 15px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: italic;
     cursor: pointer;
     margin-left: auto;
     display: block;

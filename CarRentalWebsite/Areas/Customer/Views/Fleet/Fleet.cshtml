@@ -13,48 +13,62 @@
         <div class="top-container">
             <div class="main-text">
                 <h1>OUR FLEET</h1>
-                <p>Browse our collection of well-maintained and clean vehicles.</p>
+                <p>BROWSE OUR COLLECTION OF WELL-MAINTAINED AND CLEAN VEHICLES.</p>
             </div>
         </div>
     </header>
 
     <main>
-        <div class="filter-car">
-            <p>
-                Sort by
-            </p>
+        <div class="dropdown-container">
+            @Html.DropDownList(
+                     "CarCategory",
+                     new List<SelectListItem>
+            {
+            new SelectListItem { Text = "Car categories", Value = "", Selected = true, Disabled = true }, 
+            new SelectListItem { Text = "Hatchback", Value = "Hatchback" },
+            new SelectListItem { Text = "Sedan", Value = "Sedan" },
+            new SelectListItem { Text = "SUV", Value = "SUV" },
+            new SelectListItem { Text = "Pick-Up Trucks", Value = "Pick-Up Trucks" },
+            new SelectListItem { Text = "Van", Value = "Van" }
+            },
+                     htmlAttributes: new { @class = "car-category-dropdown" }
+                     )
         </div>
+
         <div class="bottom-container">
 
             @foreach (var car in Model)
             {
                 <div class="product-container">
-                    <div class="product-info">
-                        <div class="product-name">
-                            <h2><strong>@car.CarModel @car.CarTransmission</strong></h2>
-                        </div>
-                        <div class="car-icons-flex">
-                               <p class = car-icons-number><img src="@Url.Content("~/Customer/img/car_door.png")"/></p>
-                               <p class = car-icons-number>@car.CarDoor</p>
-                               <p class = car-icons-number><img src="@Url.Content("~/Customer/img/car_seat.png")"/></p>
-                               <p class = car-icons-number>@car.CarSeat</p>
-                               <p class = car-icons-number><img src="@Url.Content("~/Customer/img/car_baggage.png")"/></p>
-                               <p class = car-icons-number>@car.CarBaggage</p>
-                        </div>
-                            <h4><strong>Price:  </strong>₱ @car.CarPrice</h4>
-                        <h4><strong>Car Category: </strong></h4>
-                        <p>@car.CarCategory.</p>
-                        <h4><strong>Top Feature:</strong></h4>
-                        <p>@car.CarTopFeature.</p>
-                        <h4><strong>Safety:</strong></h4>
-                        <p>@car.CarSafety</p>
-                        <button class="btn">Button</button>
-                    </div>
                     <div class="image-placeholder">
                         <div class="img-box">
                             @Html.ImageWithSize(Url.Content((string)car.CarImage), alt: "CarImage")
                         </div>
                     </div>
+                    <div class="product-info">
+                        <div class="product-name">
+                            <div class="button-flex">
+                                <h2><strong>@car.CarModel</strong></h2>
+                                <button class="btn">BOOK NOW</button>
+                            </div>
+                            <p class="car-transmission">@car.CarTransmission</p>
+                        </div>
+                        <h4><strong>Price (per day)</strong></h4>
+                        <p class="p-labels">@car.FormattedCarPrice</p>
+                        <div class="car-icons-flex">
+                            <p class=car-icons-number><img src="@Url.Content("~/Customer/img/car_door.png")" /></p>
+                            <p class=car-icons-number>@car.CarDoor</p>
+                            <p class=car-icons-number><img src="@Url.Content("~/Customer/img/car_seat.png")" /></p>
+                            <p class=car-icons-number>@car.CarSeat</p>
+                        </div>
+                        <h4><strong>Car Category: </strong></h4>
+                        <p class="p-labels">@car.CarCategory.</p>
+                        <h4><strong>Top Feature:</strong></h4>
+                        <p class="p-labels">@car.CarTopFeature.</p>
+                        <h4><strong>Safety:</strong></h4>
+                        <p class="p-labels">@car.CarSafety</p>
+                    </div>
+                    
                 </div>
             }
         </div>
