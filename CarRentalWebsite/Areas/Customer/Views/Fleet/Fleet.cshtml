@@ -1,5 +1,4 @@
 ﻿@using CarRentalWebsite.Areas.Customer.Helpers
-@model IEnumerable<CarRentalWebsite.Areas.Customer.Models.FleetModel>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -75,7 +74,21 @@
                         <div class="product-name">
                             <div class="button-flex">
                                 <h2><strong>@car.CarModel</strong></h2>
-                                <a asp-action="BookNow" asp-controller="Fleet" asp-route-carId="@car.CarId">Book Now</a>
+                                <a asp-action="BookNow" 
+                                   asp-controller="Fleet" 
+                                   asp-route-carId="@car.CarId" 
+                                   asp-route-carModel="@car.CarModel" 
+                                   asp-route-carImage="@car.CarImage"
+                                   asp-route-carTransmission="@car.CarTransmission"
+                                   asp-route-carPrice="@car.CarPrice"
+                                   asp-route-carFormattedCarPrice="@car.FormattedCarPrice"
+                                   asp-route-carDoor="@car.CarDoor"
+                                   asp-route-carSeat="@car.CarSeat"
+                                   asp-route-carCategory="@car.CarCategory"
+                                   asp-route-carTopFeature="@car.CarTopFeature"
+                                   asp-route-carSafety="@car.CarSafety">
+                                    Book Now
+                                </a>
                             </div>
                             <p class="car-transmission">@car.CarTransmission</p>
                         </div>

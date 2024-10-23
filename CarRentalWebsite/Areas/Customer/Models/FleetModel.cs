@@ -1,8 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using CarRentalWebsite.Areas.Customer.Helpers;
-using CarRentalWebsite.Areas.Customer.Models;
-using System.Collections.Generic;
-using System.Globalization;
+﻿using System.Globalization;
 
 namespace CarRentalWebsite.Areas.Customer.Models
 {

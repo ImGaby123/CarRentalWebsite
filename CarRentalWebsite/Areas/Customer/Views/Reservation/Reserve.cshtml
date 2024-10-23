@@ -1,12 +1,55 @@
-﻿@{
-    ViewBag.Title = "Reservation";
-}
+﻿@using CarRentalWebsite.Areas.Customer.Helpers
 
-<h2>Reservation</h2>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="~/Customer/css/reserve.css" />
+</head>
+<body>
 <form method="post" action="/Reservation/Submit">
-  
+
     <input type="text" name="CarId" value="@ViewBag.CarId" />
 
     <button type="submit">Submit Reservation</button>
 </form>
+
+<div class="bottom-container">
+    <div class="product-container">
+        <div class="image-placeholder">
+            <div class="img-box">
+                @Html.ImageWithSize(Url.Content((string)@ViewBag.CarImage), alt: "Car Image")
+            </div>
+        </div>
+        <div class="product-info">
+            <div class="product-name">
+                <div class="button-flex">
+                    <h2><strong>@ViewBag.CarModel</strong></h2>
+                </div>
+                <p class="car-transmission">@ViewBag.CarTransmission</p>
+            </div>
+            <h4><strong>Price (per day)</strong></h4>
+            <p class="p-labels">@ViewBag.FormattedCarPrice</p>
+            <div class="car-icons-flex">
+                <p class="car-icons-number">
+                    <img src="@Url.Content("~/Customer/img/car_door.png")" />
+                </p>
+                <p class="car-icons-number">@ViewBag.CarDoor</p>
+                <p class="car-icons-number">
+                    <img src="@Url.Content("~/Customer/img/car_seat.png")" />
+                </p>
+                <p class="car-icons-number">@ViewBag.CarSeat</p>
+            </div>
+            <h4><strong>Car Category:</strong></h4>
+            <p class="p-labels">@ViewBag.CarCategory</p>
+            <h4><strong>Top Feature:</strong></h4>
+            <p class="p-labels">@ViewBag.CarTopFeature</p>
+            <h4><strong>Safety:</strong></h4>
+            <p class="p-labels">@ViewBag.CarSafety</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

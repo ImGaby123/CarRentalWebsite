@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using CarRentalWebsite.Areas.Customer.Helpers;
-using CarRentalWebsite.Areas.Customer.Models;
 
 
 namespace CarRentalWebsite.Areas.Customer.Controllers
@@ -16,7 +15,29 @@ namespace CarRentalWebsite.Areas.Customer.Controllers
         }
         public IActionResult BookNow(int carId)
         {
-            return RedirectToAction("Reserve", "Reservation", new { id = carId });
+            var fleet = FleetFunction.GetFleetData();
+
+            var car = fleet.FirstOrDefault(c => c.CarId == carId);
+
+            if (car == null)
+            {
+                return NotFound();
+            }
+
+            return RedirectToAction("Reserve", "Reservation", new
+            {
+                id = car.CarId,
+                model = car.CarModel,
+                image = car.CarImage,
+                transmission = car.CarTransmission,
+                formattedcarprice = car.FormattedCarPrice,
+                price = car.CarPrice,
+                door = car.CarDoor,
+                seat = car.CarSeat,
+                category = car.CarCategory,
+                topFeature = car.CarTopFeature,
+                safety = car.CarSafety
+            });
         }
     }
 }
