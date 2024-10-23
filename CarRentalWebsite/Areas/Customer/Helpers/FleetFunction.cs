@@ -5,11 +5,11 @@ namespace CarRentalWebsite.Areas.Customer.Helpers
 {
     public class FleetFunction
     {
-        public static List<Fleet> GetFleetData()
+        public static List<FleetModel> GetFleetData()
         {
-            var fleetList = new List<Fleet>();
+            var fleetList = new List<FleetModel>();
 
-            var car1 = new Fleet
+            var car1 = new FleetModel
             {
                 CarId = 1,
                 CarModel = "Honda Brio 2024",
@@ -24,7 +24,7 @@ namespace CarRentalWebsite.Areas.Customer.Helpers
                 CarImage = "~/Customer/img/honda_brio_2024.png"
             };
 
-            var car2 = new Fleet
+            var car2 = new FleetModel
             {
                 CarId = 2,
                 CarModel = "Honda City 2024",
@@ -39,7 +39,7 @@ namespace CarRentalWebsite.Areas.Customer.Helpers
                 CarImage = "~/Customer/img/honda_city_2024.png"
             };
 
-            var car3 = new Fleet
+            var car3 = new FleetModel
             {
                 CarId = 3,
                 CarModel = "Mitsubishi Mirage 2024",
@@ -54,7 +54,7 @@ namespace CarRentalWebsite.Areas.Customer.Helpers
                 CarImage = "~/Customer/img/mitsubishi_mirage_20241.png"
             };
 
-            var car4 = new Fleet
+            var car4 = new FleetModel
             {
                 CarId = 4,
                 CarModel = "Honda Brio 2024",
@@ -69,7 +69,7 @@ namespace CarRentalWebsite.Areas.Customer.Helpers
                 CarImage = "~/Customer/img/home_hatchback.png"
             };
 
-            var car5 = new Fleet
+            var car5 = new FleetModel
             {
                 CarId = 5,
                 CarModel = "Honda City 2024",
@@ -84,7 +84,7 @@ namespace CarRentalWebsite.Areas.Customer.Helpers
                 CarImage = "~/Customer/img/img_b.png"
             };
 
-            var car6 = new Fleet
+            var car6 = new FleetModel
             {
                 CarId = 6,
                 CarModel = "Suzuki Celerio",

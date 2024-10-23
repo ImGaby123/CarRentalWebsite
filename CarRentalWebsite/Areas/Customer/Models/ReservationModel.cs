@@ -3,8 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CarRentalWebsite.Areas.Customer.Models
 {
-    public class Reservation
+    public class ReservationModel
     {
+        public int ReservationId { get; set; }
         public required string Name { get; set; }
 
         public required string Email { get; set; }

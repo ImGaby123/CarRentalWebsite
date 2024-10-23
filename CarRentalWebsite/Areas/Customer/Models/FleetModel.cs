@@ -6,7 +6,7 @@ using System.Globalization;
 
 namespace CarRentalWebsite.Areas.Customer.Models
 {
-    public class Fleet
+    public class FleetModel
     {
         public int CarId { get; set; }
         public string CarModel { get; set; }

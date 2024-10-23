@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Reservation";
+}
+
+<h2>Reservation</h2>
+
+<form method="post" action="/Reservation/Submit">
+  
+    <input type="text" name="CarId" value="@ViewBag.CarId" />
+
+    <button type="submit">Submit Reservation</button>
+</form>

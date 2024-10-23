@@ -1,6 +1,6 @@
 ﻿namespace CarRentalWebsite.Areas.Customer.Models
 {
-    public class Contact
+    public class ContactModel
     {
         public string Name { get; set; }
         public string Email { get; set; }

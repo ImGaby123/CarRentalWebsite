@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using CarRentalWebsite.Areas.Customer.Helpers;
+using CarRentalWebsite.Areas.Customer.Models;
 
 
 namespace CarRentalWebsite.Areas.Customer.Controllers
@@ -13,10 +14,9 @@ namespace CarRentalWebsite.Areas.Customer.Controllers
 
             return View(fleetList);
         }
-        public IActionResult Reservation()
+        public IActionResult BookNow(int carId)
         {
-
-            return View();
+            return RedirectToAction("Reserve", "Reservation", new { id = carId });
         }
     }
 }
