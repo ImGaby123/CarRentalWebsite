@@ -1,32 +1,38 @@
 ﻿.top-container {
-    /*background-color: #000;*/
-    background-image: url("/Customer/img/fleet_bg.png");
-    padding: 20px;
-    text-align: center;
-    color: white;
-}
-
-.main-text {
-    margin-top: 20px;
-    font-style: italic;
-}
-
-.main-text p{
-    font-size: larger;
+    background-image: url('/Customer/img/fleet_bg.png');
+    background-size: cover;
+    background-position: center;
+    padding-bottom:10px;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
 }
 
 h1 {
-    font-size: 70px;
     font-weight: bold;
+    font-size: 70px;
+    font-style: italic;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20px;
+    font-style: italic;
+    text-align: center
+}
+
+.dropdown-container {
+    display: flex;
+    justify-content: space-evenly;
+    color: pink;
 }
 
 .car-category-dropdown {
-    border-radius: 25px; 
+    border-radius: 25px;
     padding: 5px;
     border: 2px solid #000;
     font-size: 16px;
     font-weight: bold;
-    width: 150px;
+    width: 185px;
     margin: 20px 30px;
 }
 

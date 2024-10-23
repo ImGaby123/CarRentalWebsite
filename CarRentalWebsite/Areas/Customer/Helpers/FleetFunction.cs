@@ -48,7 +48,7 @@ namespace CarRentalWebsite.Areas.Customer.Helpers
                 CarBaggage = 3,
                 CarTopFeature = "Keyless Entry, Apple CarPlay/Android Auto, Bluetooth Audio",
                 CarSafety = "Toyota Safety Sense (pre-collision system, Lane departure alert, Adaptive cruise control) Vehicle Stability Control Anti-lock Braking System (ABS) with Electronic Brakeforce Distribution (EBD)",
-                CarImage = "~/Customer/img/mitsubishi_mirage_2024.png"
+                CarImage = "~/Customer/img/mitsubishi_mirage_20241.png"
             };
 
             var car4 = new Fleet
@@ -62,7 +62,7 @@ namespace CarRentalWebsite.Areas.Customer.Helpers
                 CarBaggage = 3,
                 CarTopFeature = "7-inch Touchscreen Display, Keyless Entry, LED Headlights",
                 CarSafety = "Toyota Safety Sense (pre-collision system, Lane departure alert, Adaptive cruise control) Vehicle Stability Control Anti-lock Braking System (ABS) with Electronic Brakeforce Distribution (EBD)",
-                CarImage = "~/Customer/img/hatchback.png"
+                CarImage = "~/Customer/img/home_hatchback.png"
             };
 
             var car5 = new Fleet

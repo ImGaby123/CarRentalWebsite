@@ -13,7 +13,7 @@
         <div class="top-container">
             <div class="main-text">
                 <h1>OUR FLEET</h1>
-                <p>BROWSE OUR COLLECTION OF WELL-MAINTAINED AND CLEAN VEHICLES.</p>
+                <h3>BROWSE OUR COLLECTION OF WELL-MAINTAINED AND CLEAN VEHICLES.</h3>
             </div>
         </div>
     </header>
@@ -30,6 +30,30 @@
             new SelectListItem { Text = "SUV", Value = "SUV" },
             new SelectListItem { Text = "Pick-Up Trucks", Value = "Pick-Up Trucks" },
             new SelectListItem { Text = "Van", Value = "Van" }
+            },
+                     htmlAttributes: new { @class = "car-category-dropdown" }
+                     )
+
+            @Html.DropDownList(
+                     "Transmission",
+                     new List<SelectListItem>
+            {
+            new SelectListItem { Text = "Transmission", Value = "", Selected = true, Disabled = true },
+            new SelectListItem { Text = "Automatic", Value = "AT" },
+            new SelectListItem { Text = "Manual", Value = "MT" },
+            new SelectListItem { Text = "Automatic/Manual", Value = "AT/MT" },
+            new SelectListItem { Text = "CVT", Value = "CVT" },
+            },
+                     htmlAttributes: new { @class = "car-category-dropdown" }
+                     )
+
+            @Html.DropDownList(
+                     "Sort by",
+                     new List<SelectListItem>
+            {
+            new SelectListItem { Text = "Price", Value = "", Selected = true, Disabled = true },
+            new SelectListItem { Text = "Price Low to High", Value = "PriceLTH" },
+            new SelectListItem { Text = "Price High to Low", Value = "PriceHTL" },
             },
                      htmlAttributes: new { @class = "car-category-dropdown" }
                      )

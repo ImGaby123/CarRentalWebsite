@@ -1,0 +1,65 @@
+﻿body {
+    background-image: url('/Customer/img/home_bg_img.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 70px;
+    font-style: italic;
+    text-align: center;
+}
+
+h3 {
+    color: #333;
+    font-size: 35px;
+    font-weight: lighter;
+    font-style: italic;
+    text-align: center
+}
+
+.card {
+    border: none;
+    border-radius: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.btn-dark {
+    background-color: #000;
+    border: none;
+    padding: 5px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-style: italic;
+    float: right;
+    margin-top: -50px;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+
+    .btn-dark:hover {
+        background-color: #333;
+    }
+
+@media (max-width: 768px) {
+    .bg-image {
+        padding: 30px 0;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+}
