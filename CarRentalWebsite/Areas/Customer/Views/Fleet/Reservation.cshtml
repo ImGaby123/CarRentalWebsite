@@ -1,0 +1,42 @@
+﻿@model CarRentalWebsite.Areas.Customer.Models.Reservation
+<h2>Reservation</h2>
+@using (Html.BeginForm("SubmitReservation", "Reservation", FormMethod.Post, new { area = "Customer" }))
+{
+    <div>
+        @Html.TextBoxFor(model => model.Name, new { placeholder = "Name" })
+        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "validation-message" })
+
+        @Html.TextBoxFor(model => model.Email, new { type = "email", placeholder = "Email" })
+        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "validation-message" })
+
+        @Html.TextBoxFor(model => model.PhoneNumber, new { type = "tel", placeholder = "Phone Number" })
+        @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "validation-message" })
+
+        @Html.Label("Pickup Location", "Pick-up Location:")
+        @Html.TextBoxFor(model => model.PickupLocation, new { placeholder = "City, Airport, Address or hotel" })
+        @Html.ValidationMessageFor(model => model.PickupLocation, "", new { @class = "validation-message" })
+
+        @Html.Label("Return Location", "Return Location:")
+        @Html.TextBoxFor(model => model.ReturnLocation, new { placeholder = "City, Airport, Address or hotel" })
+        @Html.ValidationMessageFor(model => model.ReturnLocation, "", new { @class = "validation-message" })
+
+        @Html.LabelFor(model => model.FromDate, "From Date:")
+        @Html.TextBoxFor(model => model.FromDate, "{0:yyyy-MM-dd}", new { type = "date" })
+        @Html.ValidationMessageFor(model => model.FromDate, "", new { @class = "validation-message" })
+
+        @Html.LabelFor(model => model.FromTime, "From Time:")
+        @Html.TextBoxFor(model => model.FromTime, "{0:HH:mm}", new { type = "time" })
+        @Html.ValidationMessageFor(model => model.FromTime, "", new { @class = "validation-message" })
+
+        @Html.LabelFor(model => model.UntilDate, "Until Date:")
+        @Html.TextBoxFor(model => model.UntilDate, "{0:yyyy-MM-dd}", new { type = "date" })
+        @Html.ValidationMessageFor(model => model.UntilDate, "", new { @class = "validation-message" })
+
+        @Html.LabelFor(model => model.UntilTime, "Until Time:")
+        @Html.TextBoxFor(model => model.UntilTime, "{0:HH:mm}", new { type = "time" })
+        @Html.ValidationMessageFor(model => model.UntilTime, "", new { @class = "validation-message" })
+
+        <button type="submit">Submit</button>
+    </div>
+
+}

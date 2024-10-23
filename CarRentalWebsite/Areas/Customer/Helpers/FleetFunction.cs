@@ -79,11 +79,26 @@ namespace CarRentalWebsite.Areas.Customer.Helpers
                 CarImage = "~/Customer/img/img_b.png"
             };
 
+            var car6 = new Fleet
+            {
+                CarModel = "Suzuki Celerio",
+                CarCategory = "Sedan",
+                CarPrice = 2800.00m,
+                CarTransmission = "Automatic/CVT Transimision",
+                CarSeat = 6,
+                CarDoor = 4,
+                CarBaggage = 3,
+                CarTopFeature = "7-inch Touchscreen, Auto Gear Shift, Spacious Cabin",
+                CarSafety = "Toyota Safety Sense (pre-collision system, lane departure alert, adaptive cruise control)\nVehicle Stability Control\r\nAnti-lock Braking System (ABS) with Electronic Brakeforce Distribution (EBD)",
+                CarImage = "~/Customer/img/suzuki_celerio.png"
+            };
+
             fleetList.Add(car1);
             fleetList.Add(car2);
             fleetList.Add(car3);
             fleetList.Add(car4);
             fleetList.Add(car5);
+            fleetList.Add(car6);
 
             return fleetList;
         }
