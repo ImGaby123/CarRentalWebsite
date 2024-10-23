@@ -74,7 +74,8 @@
                         <div class="product-name">
                             <div class="button-flex">
                                 <h2><strong>@car.CarModel</strong></h2>
-                                <a asp-action="BookNow" 
+                                <a class="book-now" 
+                                   asp-action="BookNow" 
                                    asp-controller="Fleet" 
                                    asp-route-carId="@car.CarId" 
                                    asp-route-carModel="@car.CarModel" 

@@ -1,53 +1,9 @@
-﻿.top-container {
-    background-image: url('/Customer/img/fleet_bg.png');
-    background-size: cover;
-    background-position: center;
-    padding-bottom: 10px;
-    color: #fff;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
-}
-body   {
-}
-h1 {
-    font-weight: bold;
-    font-size: 70px;
-    font-style: italic;
-    text-align: center;
-}
-
-h3 {
-    font-size: 200px;
-    font-style: italic;
-    text-align: center;
-}
-
-.dropdown-container {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.car-category-dropdown {
-    border-radius: 25px;
-    padding: 5px;
-    border: 2px solid #000;
-    font-size: 16px;
-    font-weight: bold;
-    width: 185px;
-    margin: 20px 30px;
-}
-
-.bottom-container {
-    padding-left: 30px;
+﻿.bottom-container {
+    width: 400px;
 }
 
 .product-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.button-flex {
-    display: flex;
-    justify-content: space-between;
+    box-shadow: 0px 0px 2px #808080;
 }
 
 .car-icons-flex {
@@ -57,7 +13,7 @@ h3 {
 }
 
 .image-placeholder {
-    width: 50%;
+  /*  width: 50%;*/
 }
 
 .img-box {
@@ -69,32 +25,30 @@ h3 {
 }
 
 .product-info {
-    width: 90%;
+    padding: 20px;
+    width: 100%;
+
 }
 
 .product-container h2 {
-    font-size: 1.30rem;
+    font-size: 2.0rem;
     margin-top: 20px;
-    font-weight: bold;
 }
 
 .product-container .car-transmission {
-    margin-top: -15px;
+    font-size: 1.25rem;
 }
 
 .product-container h4 {
-    font-size: 1.15rem;
-    margin-top: -15px;
+    font-size: 1.25rem;
 }
 
 .product-container .p-labels {
-    font-size: 1rem;
-    margin-top: -10px;
+    font-size: 1.05rem;
 }
 
 .product-container .car-icons-number {
-    font-size: 0.9rem;
-    margin-top: -15px;
+    font-size: 1.05rem;
     padding-left: 10px;
 }
 

@@ -43,6 +43,8 @@ h3 {
 .product-container {
     display: flex;
     justify-content: space-between;
+    box-shadow: 0px 0px 2px #808080;
+    padding: 20px;
 }
 
 .button-flex {
@@ -69,32 +71,29 @@ h3 {
 }
 
 .product-info {
-    width: 90%;
+    width: 100%;
+
 }
 
 .product-container h2 {
-    font-size: 1.30rem;
+    font-size: 2.0rem;
     margin-top: 20px;
-    font-weight: bold;
 }
 
 .product-container .car-transmission {
-    margin-top: -15px;
+    font-size: 1.25rem;
 }
 
 .product-container h4 {
-    font-size: 1.15rem;
-    margin-top: -15px;
+    font-size: 1.25rem;
 }
 
 .product-container .p-labels {
-    font-size: 1rem;
-    margin-top: -10px;
+    font-size: 1.05rem;
 }
 
 .product-container .car-icons-number {
-    font-size: 0.9rem;
-    margin-top: -15px;
+    font-size: 1.05rem;
     padding-left: 10px;
 }
 .button-flex {
@@ -103,20 +102,22 @@ h3 {
     justify-content: space-between;
 }
 
-button.btn {
+.book-now {
     margin-top: 20px;
     background-color: #000;
     color: #fff;
     padding: 7px 15px;
     border-radius: 30px;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 500;
     font-style: italic;
     cursor: pointer;
-    margin-left: auto;
     display: block;
+    text-align: center;
+    text-decoration: none; 
+    margin-left: auto;
 }
 
-    button.btn:hover {
+    .book-now:hover {
         color: #fff;
     }
