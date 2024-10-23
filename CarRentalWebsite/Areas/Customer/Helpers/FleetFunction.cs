@@ -11,6 +11,7 @@ namespace CarRentalWebsite.Areas.Customer.Helpers
 
             var car1 = new Fleet
             {
+                CarId = 1,
                 CarModel = "Honda Brio 2024",
                 CarCategory = "Sedan",
                 CarPrice = 3000.00m,
@@ -25,6 +26,7 @@ namespace CarRentalWebsite.Areas.Customer.Helpers
 
             var car2 = new Fleet
             {
+                CarId = 2,
                 CarModel = "Honda City 2024",
                 CarCategory = "Sedan",
                 CarPrice = 3500.00m,
@@ -39,6 +41,7 @@ namespace CarRentalWebsite.Areas.Customer.Helpers
 
             var car3 = new Fleet
             {
+                CarId = 3,
                 CarModel = "Mitsubishi Mirage 2024",
                 CarCategory = "Sedan",
                 CarPrice = 2800.00m,
@@ -53,6 +56,7 @@ namespace CarRentalWebsite.Areas.Customer.Helpers
 
             var car4 = new Fleet
             {
+                CarId = 4,
                 CarModel = "Honda Brio 2024",
                 CarCategory = "Sedan",
                 CarPrice = 3000.00m,
@@ -67,6 +71,7 @@ namespace CarRentalWebsite.Areas.Customer.Helpers
 
             var car5 = new Fleet
             {
+                CarId = 5,
                 CarModel = "Honda City 2024",
                 CarCategory = "Sedan",
                 CarPrice = 3500.00m,
@@ -81,6 +86,7 @@ namespace CarRentalWebsite.Areas.Customer.Helpers
 
             var car6 = new Fleet
             {
+                CarId = 6,
                 CarModel = "Suzuki Celerio",
                 CarCategory = "Sedan",
                 CarPrice = 2800.00m,

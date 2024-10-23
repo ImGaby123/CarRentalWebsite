@@ -8,6 +8,7 @@ namespace CarRentalWebsite.Areas.Customer.Models
 {
     public class Fleet
     {
+        public int CarId { get; set; }
         public string CarModel { get; set; }
         public string CarTransmission { get; set; }
         public int CarDoor { get; set; }
