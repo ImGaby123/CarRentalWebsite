@@ -8,6 +8,8 @@ namespace CarRentalWebsite.Areas.Customer.Models
        [Required]
         public int ReservationId { get; set; }
         [Required]
+        public int CarId { get; set; }
+        [Required]
         public required string Name { get; set; }
         [Required]
 
