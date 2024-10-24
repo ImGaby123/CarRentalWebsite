@@ -1,4 +1,102 @@
-﻿.bottom-container {
+﻿.page-flex{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.reservation-form {
+    margin-left: 20px;
+    border-radius: 8px; 
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column; 
+}
+
+    .reservation-form h2 {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .reservation-form p {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 50px;
+    }
+
+    .reservation-form .form-group {
+        display: flex; 
+        flex-direction: column; 
+        margin-bottom: 20px; 
+    }
+
+    .reservation-form .form-row {
+        display: flex; 
+        justify-content: space-between; 
+        gap: 16px; 
+    }
+
+    .reservation-form label {
+        color: #333; 
+        font-size: 1.05rem; 
+    }
+
+    .reservation-form input {
+        padding: 10px;
+        width: 270px;
+        border: 1px solid #ccc; 
+        border-radius: 10px;
+        font-size: 1rem;
+    }
+
+        .reservation-form input[type="text"],
+        .reservation-form input[type="email"],
+        .reservation-form input[type="tel"] {
+            flex: 1; 
+        }
+
+        .reservation-form input[type="date"],
+        .reservation-form input[type="time"],
+        .reservation-form input[type="pickup"],
+        .reservation-form input[type="return"] {
+            width: 420px;
+        }
+
+        .reservation-form input:focus {
+            border-color: #007bff; 
+            outline: none; 
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+    .reservation-form button {
+        width: auto; 
+        padding: 12px 19px; 
+        background-color: black;
+        color: white; 
+        border: none;
+        border-radius: 25px; 
+        font-size: 18px; 
+        cursor: pointer;
+        transition: background-color 0.3s ease; 
+        margin-top: 16px;  
+    }
+
+        .reservation-form button:hover {
+            background-color: #333; 
+        }
+
+    .reservation-form .validation-message {
+        color: #ff4d4d; 
+        margin-top: -8px;
+        margin-bottom: 8px; 
+        font-size: 14px; 
+    }
+
+
+/*---------------------------------------------------------------------*/
+
+.bottom-container {
     width: 400px;
 }
 
