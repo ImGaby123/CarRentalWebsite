@@ -5,10 +5,10 @@ namespace CarRentalWebsite.Areas.Customer.Controllers
     [Area("Customer")] 
     public class ReservationController : Controller
     {
-        public IActionResult Reserve(int id, string model, string image, string transmission, string formattedcarprice, decimal price, int door, int seat, string category, string topFeature, string safety)
+        public IActionResult Reserve(int id, string carmodel, string image, string transmission, string formattedcarprice, decimal price, int door, int seat, string category, string topFeature, string safety)
         {
             ViewBag.CarId = id;
-            ViewBag.CarModel = model;
+            ViewBag.CarModel = carmodel;
             ViewBag.CarImage = image;
             ViewBag.CarTransmission = transmission;
             ViewBag.FormattedCarPrice = formattedcarprice;

@@ -1,54 +1,116 @@
-﻿@model CarRentalWebsite.Areas.Customer.Models.ReservationModel
-
+﻿@using CarRentalWebsite.Areas.Customer.Helpers
+@model CarRentalWebsite.Areas.Customer.Models.ReservationModel
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link rel="stylesheet" href="~/Customer/css/fleet.css" />
-    <script src="~/Customer/js/fleet.js" defer></script>
+    <link rel="stylesheet" href="~/Customer/css/reserve.css" />
 </head>
 <body>
-    <h2>Reservation</h2>
-@using (Html.BeginForm("SubmitReservation", "Fleet", FormMethod.Post, new { area = "Customer" }))
-{
-    <div>
-        @Html.TextBoxFor(model => model.Name, new { placeholder = "Name" })
-        @Html.ValidationMessageFor(model => model.Name)
+    <div class="page-flex">
+        <div class="bottom-container">
+            <div class="product-container">
+                <div class="image-placeholder">
+                    <div class="img-box">
+                        @Html.ImageWithSize(Url.Content((string)@ViewBag.CarImage), alt: "Car Image")
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-name">
+                        <div class="button-flex">
+                            <h2><strong>@ViewBag.CarModel</strong></h2>
+                        </div>
+                        <p class="car-transmission">@ViewBag.CarTransmission</p>
+                    </div>
+                    <h4><strong>Price (per day)</strong></h4>
+                    <p class="p-labels">@ViewBag.FormattedCarPrice</p>
+                    <div class="car-icons-flex">
+                        <p class="car-icons-number">
+                            <img src="@Url.Content("~/Customer/img/car_door.png")" />
+                        </p>
+                        <p class="car-icons-number">@ViewBag.CarDoor</p>
+                        <p class="car-icons-number">
+                            <img src="@Url.Content("~/Customer/img/car_seat.png")" />
+                        </p>
+                        <p class="car-icons-number">@ViewBag.CarSeat</p>
+                    </div>
+                    <h4><strong>Car Category:</strong></h4>
+                    <p class="p-labels">@ViewBag.CarCategory</p>
+                    <h4><strong>Top Feature:</strong></h4>
+                    <p class="p-labels">@ViewBag.CarTopFeature</p>
+                    <h4><strong>Safety:</strong></h4>
+                    <p class="p-labels">@ViewBag.CarSafety</p>
+                </div>
+            </div>
+        </div>
+        <div class="reservation-form">
+            <h2>RENT A CAR</h2>
+            @using (Html.BeginForm("Submit", "Reservation", FormMethod.Post))
+            {
+                @Html.Hidden("CarId", (int)ViewBag.CarId)
 
-        @Html.TextBoxFor(model => model.Email, new { type = "email", placeholder = "Email" })
-        @Html.ValidationMessageFor(model => model.Email)
+                <div class="form-row">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Name)
+                        @Html.TextBoxFor(model => model.Name, new { placeholder = "Name" })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "validation-message" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Email)
+                        @Html.TextBoxFor(model => model.Email, new { type = "email", placeholder = "Email" })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "validation-message" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.PhoneNumber)
+                        @Html.TextBoxFor(model => model.PhoneNumber, new { type = "tel", placeholder = "Phone Number" })
+                        @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "validation-message" })
+                    </div>
+                </div>
 
-        @Html.TextBoxFor(model => model.PhoneNumber, new { type = "tel", placeholder = "Phone Number" })
-        @Html.ValidationMessageFor(model => model.PhoneNumber)
+                <div class="form-row">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.PickupLocation)
+                        @Html.TextBoxFor(model => model.PickupLocation, new { type = "pickup", placeholder = "City, Airport, Address or hotel" })
+                        @Html.ValidationMessageFor(model => model.PickupLocation, "", new { @class = "validation-message" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ReturnLocation)
+                        @Html.TextBoxFor(model => model.ReturnLocation, new { type = "return", placeholder = "City, Airport, Address or hotel" })
+                        @Html.ValidationMessageFor(model => model.ReturnLocation, "", new { @class = "validation-message" })
+                    </div>
+                </div>
 
-        @Html.Label("Pickup Location", "Pick-up Location:")
-        @Html.TextBoxFor(model => model.PickupLocation, new { placeholder = "City, Airport, Address or hotel" })
-        @Html.ValidationMessageFor(model => model.PickupLocation)
+                <div class="form-row">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.FromDate)
+                        @Html.TextBoxFor(model => model.FromDate, "{0:yyyy-MM-dd}", new { type = "date" })
+                        @Html.ValidationMessageFor(model => model.FromDate, "", new { @class = "validation-message" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.FromTime)
+                        @Html.TextBoxFor(model => model.FromTime, "{0:HH:mm}", new { type = "time" })
+                        @Html.ValidationMessageFor(model => model.FromTime, "", new { @class = "validation-message" })
+                    </div>
+                </div>
 
-        @Html.Label("Return Location", "Return Location:")
-        @Html.TextBoxFor(model => model.ReturnLocation, new { placeholder = "City, Airport, Address or hotel" })
-        @Html.ValidationMessageFor(model => model.ReturnLocation)
+                <div class="form-row">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.UntilDate)
+                        @Html.TextBoxFor(model => model.UntilDate, "{0:yyyy-MM-dd}", new { type = "date" })
+                        @Html.ValidationMessageFor(model => model.UntilDate, "", new { @class = "validation-message" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.UntilTime)
+                        @Html.TextBoxFor(model => model.UntilTime, "{0:HH:mm}", new { type = "time" })
+                        @Html.ValidationMessageFor(model => model.UntilTime, "", new { @class = "validation-message" })
+                    </div>
+                </div>
 
-        @Html.LabelFor(model => model.FromDate, "From Date:")
-        @Html.TextBoxFor(model => model.FromDate, "{0:yyyy-MM-dd}", new { type = "date" })
-        @Html.ValidationMessageFor(model => model.FromDate)
-
-        @Html.LabelFor(model => model.FromTime, "From Time:")
-        @Html.TextBoxFor(model => model.FromTime, "{0:HH:mm}", new { type = "time" })
-        @Html.ValidationMessageFor(model => model.FromTime)
-
-        @Html.LabelFor(model => model.UntilDate, "Until Date:")
-        @Html.TextBoxFor(model => model.UntilDate, "{0:yyyy-MM-dd}", new { type = "date" })
-        @Html.ValidationMessageFor(model => model.UntilDate)
-
-        @Html.LabelFor(model => model.UntilTime, "Until Time:")
-        @Html.TextBoxFor(model => model.UntilTime, "{0:HH:mm}", new { type = "time" })
-        @Html.ValidationMessageFor(model => model.UntilTime)
-
-        <button type="submit">Submit</button>
+                <button type="submit">Get Quote</button>
+            }
+        </div>
     </div>
-}
 </body>
 </html>

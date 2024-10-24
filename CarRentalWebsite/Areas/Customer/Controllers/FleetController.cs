@@ -27,7 +27,7 @@ namespace CarRentalWebsite.Areas.Customer.Controllers
             return RedirectToAction("Reserve", "Reservation", new
             {
                 id = car.CarId,
-                model = car.CarModel,
+                carmodel = car.CarModel,
                 image = car.CarImage,
                 transmission = car.CarTransmission,
                 formattedcarprice = car.FormattedCarPrice,
