@@ -50,8 +50,12 @@
             @using (Html.BeginForm("Submit", "Reservation", FormMethod.Post))
             {
                 @Html.Hidden("CarId", (int)ViewBag.CarId)
-
                 <div class="form-row">
+                    <div class="form-group">
+                        @Html.Label("Car ID")
+                        @Html.TextBox("CarId", (int)ViewBag.CarId, new { @readonly = "readonly" }) <!-- Optional: Make it read-only -->
+                    </div>
+                </div> <div class="form-row">
                     <div class="form-group">
                         @Html.LabelFor(model => model.Name)
                         @Html.TextBoxFor(model => model.Name, new { placeholder = "Name" })
